@@ -5,6 +5,6 @@ $users = "User1", "User2", "User3"
 # Loop through each AD user and add them to each AD group
 foreach ($user in $users) {
     foreach ($group in $groups) {
-        Add-ADGroupMember -Identity $group -Members $user
+        Add-ADPrincipalGroupMembership -Identity $group -Members $user
     }
 }
